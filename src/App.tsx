@@ -11,6 +11,7 @@ import Features from "./pages/Features";
 import Demo from "./pages/Demo";
 import Pricing from "./pages/Pricing";
 import Resources from "./pages/Resources";
+import PhishingTest from "./pages/PhishingTest";
 import Login from "./pages/auth/Login";
 import Signup from "./pages/auth/Signup";
 import Dashboard from "./pages/dashboard/Dashboard";
@@ -42,6 +43,7 @@ const App = () => (
             <Route path="/how-it-works" element={<HowItWorks />} />
             <Route path="/features" element={<Features />} />
             <Route path="/demo" element={<Demo />} />
+            <Route path="/phishing-test" element={<PhishingTest />} />
             <Route path="/pricing" element={<Pricing />} />
             <Route path="/resources" element={<Resources />} />
             <Route path="/login" element={<Login />} />

@@ -13,6 +13,7 @@ const Navbar = () => {
     { name: "How It Works", href: "/how-it-works" },
     { name: "Features", href: "/features" },
     { name: "Demo", href: "/demo" },
+    { name: "Take Test", href: "/phishing-test" },
     { name: "Pricing", href: "/pricing" },
     { name: "Resources", href: "/resources" },
   ];
