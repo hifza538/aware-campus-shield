@@ -1,73 +1,193 @@
-# Welcome to your Lovable project
+# PhishAware - Educational Phishing Awareness Platform
 
-## Project info
+⚠️ **FOR EDUCATIONAL USE ONLY** - This platform is designed exclusively for cybersecurity awareness training and must not be used for real phishing attacks.
 
-**URL**: https://lovable.dev/projects/9784bc32-205d-40d1-b249-1558562c487b
+## Overview
 
-## How can I edit this code?
+PhishAware is a comprehensive educational platform for phishing awareness training and simulation campaigns. Built with React, TypeScript, and Tailwind CSS, it provides organizations and educational institutions with tools to improve cybersecurity awareness through ethical simulation training.
 
-There are several ways of editing your application.
+## Features
 
-**Use Lovable**
+### Public Pages
+- **Landing Page** - Hero section with platform overview
+- **How It Works** - 3-step process explanation
+- **Features** - Comprehensive feature breakdown
+- **Interactive Demo** - Safe simulation experience
+- **Pricing** - Transparent pricing plans
+- **Resources** - Knowledge base and training materials
+- **Authentication** - Login/signup with mock authentication
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/9784bc32-205d-40d1-b249-1558562c487b) and start prompting.
+### Dashboard (Protected Routes)
+- **Campaign Management** - Create and manage phishing simulations
+- **Real-time Analytics** - Comprehensive reporting and metrics
+- **User Management** - Team and organization management
+- **Detailed Reports** - Campaign performance analysis
 
-Changes made via Lovable will be committed automatically to this repo.
+### Design System
+- **Modern UI** - Professional teal/orange color scheme
+- **Responsive Design** - Mobile-first approach
+- **Semantic Tokens** - Consistent design system
+- **Accessible Components** - WCAG compliant interface
 
-**Use your preferred IDE**
+## Technology Stack
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- **Frontend**: React 18 + TypeScript
+- **Styling**: Tailwind CSS + shadcn/ui components
+- **Routing**: React Router v6
+- **State Management**: React Context + Hooks
+- **Build Tool**: Vite
+- **Icons**: Lucide React
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## Quick Start
 
-Follow these steps:
+### Prerequisites
+- Node.js 18+ and npm
+- Modern web browser
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### Installation
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+```bash
+# Clone the repository
+git clone <your-git-url>
+cd phishaware
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The application will be available at `http://localhost:8080`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Demo Accounts
 
-**Use GitHub Codespaces**
+For testing purposes, use these demo credentials:
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- **Regular User**: any email/password combination
+- **Admin Access**: Use email containing "admin" (e.g., admin@example.com)
 
-## What technologies are used for this project?
+## Development Commands
 
-This project is built with:
+```bash
+# Development server
+npm run dev
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+# Type checking
+npm run build
 
-## How can I deploy this project?
+# Preview production build
+npm run preview
 
-Simply open [Lovable](https://lovable.dev/projects/9784bc32-205d-40d1-b249-1558562c487b) and click on Share -> Publish.
+# Lint code
+npm run lint
+```
 
-## Can I connect a custom domain to my Lovable project?
+## Deployment
 
-Yes, you can!
+### Vercel (Recommended)
+```bash
+# Install Vercel CLI
+npm install -g vercel
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+# Deploy
+vercel
+```
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+### Netlify
+```bash
+# Build for production
+npm run build
+
+# Deploy dist/ folder to Netlify
+```
+
+### Other Platforms
+The application builds to static files in the `dist/` directory and can be deployed to any static hosting service.
+
+## Project Structure
+
+```
+src/
+├── components/
+│   ├── layout/          # Layout components (Navbar, Footer, Dashboard)
+│   └── ui/              # shadcn/ui components
+├── contexts/            # React contexts (Auth)
+├── hooks/               # Custom hooks
+├── pages/               # Page components
+│   ├── auth/            # Authentication pages
+│   └── dashboard/       # Protected dashboard pages
+├── assets/              # Images and static assets
+└── lib/                 # Utilities and configurations
+```
+
+## Mock Data Structure
+
+### Campaign Schema
+```json
+{
+  "id": "number",
+  "name": "string",
+  "description": "string",
+  "status": "draft|scheduled|active|completed",
+  "template": "string",
+  "recipients": "number",
+  "startDate": "string",
+  "endDate": "string",
+  "stats": {
+    "sent": "number",
+    "opened": "number", 
+    "clicked": "number",
+    "reported": "number"
+  }
+}
+```
+
+### User Schema
+```json
+{
+  "id": "string",
+  "email": "string",
+  "name": "string",
+  "role": "admin|user",
+  "organization": "string"
+}
+```
+
+## Security & Ethics
+
+### Educational Purpose
+- Platform designed for awareness training only
+- All simulations clearly marked as educational
+- No real security risks or malicious content
+- Comprehensive ethical use guidelines
+
+### Data Protection
+- Mock authentication system (no real data collection)
+- Local storage for demo purposes only
+- No external API calls in demo mode
+- GDPR-compliant design patterns
+
+## Contributing
+
+This is an educational demonstration project. For production use:
+
+1. Implement real authentication system
+2. Add backend API integration
+3. Include comprehensive testing suite
+4. Add monitoring and analytics
+5. Implement proper security measures
+
+## License
+
+This project is for educational demonstration purposes. See terms of service for usage guidelines.
+
+## Support
+
+For questions about this demo or educational cybersecurity training:
+- Email: support@phishaware.com
+- Documentation: Available in the Resources section
+
+---
+
+**Remember**: This platform is for educational use only. Always ensure proper consent and clear communication when conducting any form of security awareness training.
