@@ -44,19 +44,25 @@ const Signup = () => {
     setLoading(true);
 
     try {
-      const success = await signup(
+      const result = await signup(
         formData.email, 
         formData.password, 
-        formData.name, 
-        formData.organization
+        formData.name.split(' ')[0] || formData.name,
+        formData.name.split(' ').slice(1).join(' ') || '',
+        'employee'
       );
       
-      if (success) {
+      if (result.success) {
         toast({
           title: "Account created!",
-          description: "Welcome to PhishAware. Your account has been created successfully.",
+          description: "Please check your email for verification instructions.",
         });
-        navigate("/dashboard");
+      } else {
+        toast({
+          title: "Sign up failed",
+          description: result.error || "An error occurred during registration.",
+          variant: "destructive",
+        });
       }
     } catch (error) {
       toast({

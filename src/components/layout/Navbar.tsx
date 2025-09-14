@@ -56,6 +56,9 @@ const Navbar = () => {
             <Link to="/login">
               <Button variant="ghost">Sign In</Button>
             </Link>
+            <Link to="/admin-auth">
+              <Button variant="outline">Admin Access</Button>
+            </Link>
             <Link to="/signup">
               <Button variant="hero">Start Free</Button>
             </Link>
@@ -97,6 +100,11 @@ const Navbar = () => {
               <Link to="/login" className="block">
                 <Button variant="ghost" className="w-full justify-start">
                   Sign In
+                </Button>
+              </Link>
+              <Link to="/admin-auth" className="block">
+                <Button variant="outline" className="w-full justify-start">
+                  Admin Access
                 </Button>
               </Link>
               <Link to="/signup" className="block">

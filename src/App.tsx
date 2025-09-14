@@ -14,11 +14,14 @@ import Resources from "./pages/Resources";
 import PhishingTest from "./pages/PhishingTest";
 import Login from "./pages/auth/Login";
 import Signup from "./pages/auth/Signup";
+import AdminAuth from "./pages/auth/AdminAuth";
 import Dashboard from "./pages/dashboard/Dashboard";
 import Campaigns from "./pages/dashboard/Campaigns";
 import CampaignDetail from "./pages/dashboard/CampaignDetail";
 import Reports from "./pages/dashboard/Reports";
 import Users from "./pages/dashboard/Users";
+import OrganizationSetup from "./pages/dashboard/OrganizationSetup";
+import EmployeeManagement from "./pages/dashboard/EmployeeManagement";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Privacy from "./pages/Privacy";
@@ -48,6 +51,8 @@ const App = () => (
             <Route path="/resources" element={<Resources />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
+            <Route path="/admin-auth" element={<AdminAuth />} />
+            <Route path="/organization-setup" element={<OrganizationSetup />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/privacy" element={<Privacy />} />
@@ -59,6 +64,7 @@ const App = () => (
             <Route path="/dashboard/campaigns/:id" element={<CampaignDetail />} />
             <Route path="/dashboard/reports" element={<Reports />} />
             <Route path="/dashboard/users" element={<Users />} />
+            <Route path="/dashboard/employees" element={<EmployeeManagement />} />
             
             {/* Catch-all */}
             <Route path="*" element={<NotFound />} />
