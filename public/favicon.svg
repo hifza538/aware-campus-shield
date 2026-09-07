@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Aware Campus Shield logo">
+  <defs>
+    <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#22c55e"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="#0b1120"/>
+  <path d="M64 16 100 30v28c0 26-17 49-36 58-19-9-36-32-36-58V30l36-14Zm0 18 22 9v21c0 18-11 34-22 40-11-6-22-22-22-40V43l22-9Z" fill="url(#g1)"/>
+  <path d="M52 62h24v8H52zm-8 16h40v8H44zm12-24h16v8H56z" fill="#e2e8f0"/>
+</svg>
